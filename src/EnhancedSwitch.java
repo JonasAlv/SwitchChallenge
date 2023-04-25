@@ -15,17 +15,16 @@ public class EnhancedSwitch {
 
     public static void printDayOfWeek(int day) {
 
-        String dayOfWeek;
-        switch (day) {
-            case 0 -> dayOfWeek = "Sunday";
-            case 1 -> dayOfWeek = "Monday";
-            case 2 -> dayOfWeek = "Tuesday";
-            case 3 -> dayOfWeek = "Wednesday";
-            case 4 -> dayOfWeek = "Thursday";
-            case 5 -> dayOfWeek = "Friday";
-            case 6 -> dayOfWeek = "Saturday";
-            default -> dayOfWeek = day + " is an invalid value";
-        }
+        String dayOfWeek = switch (day) {
+            case 0 -> "Sunday";
+            case 1 -> "Monday";
+            case 2 -> "Tuesday";
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            case 6 -> "Saturday";
+            default -> day + " is an invalid value";
+        };
         System.out.println(dayOfWeek);
     }
 }
